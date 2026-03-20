@@ -336,6 +336,8 @@ button{cursor:pointer;background:none;border:none;font-family:inherit}
 /* ============================================================
    RESPONSIVE
 ============================================================ */
+.srv-detail{display:grid;grid-template-columns:200px 1fr;gap:56px;align-items:start}
+.srv-detail-side{position:sticky;top:84px;text-align:center}
 @media(max-width:860px){
   .nav{display:none}
   .ham{display:flex}
@@ -348,6 +350,11 @@ button{cursor:pointer;background:none;border:none;font-family:inherit}
   .news-grid{grid-template-columns:1fr}
   .cnt-box{padding:44px 28px}
   .hero-eyebrow{margin-inline:auto}
+  .srv-detail{grid-template-columns:1fr;gap:28px}
+  .srv-detail-side{position:static;display:flex;flex-direction:row;align-items:center;gap:16px;text-align:left;background:var(--snow2);border:1.5px solid var(--border);border-radius:var(--r);padding:18px 20px}
+  .srv-detail-side .srv-num{display:none}
+  .srv-detail-side .srv-big-icon{margin:0;flex-shrink:0}
+  .srv-detail-side .srv-target{display:none}
 }
 @media(max-width:560px){
   .sec{padding:72px 18px}
@@ -641,12 +648,12 @@ button{cursor:pointer;background:none;border:none;font-family:inherit}
 
     <section class="sec" style="background:var(--snow)">
       <div class="sec-in">
-        <div style="display:grid;grid-template-columns:200px 1fr;gap:56px;align-items:start;margin-bottom:80px" class="rv">
-          <div style="position:sticky;top:84px;text-align:center">
-            <div style="font-family:var(--serif);font-size:3rem;color:var(--border);line-height:1;margin-bottom:8px">01</div>
-            <div style="width:64px;height:64px;background:var(--sakura-pale);border-radius:16px;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-size:2rem">🖥️</div>
+        <div class="srv-detail rv" style="margin-bottom:80px">
+          <div class="srv-detail-side">
+            <div class="srv-num" style="font-family:var(--serif);font-size:3rem;color:var(--border);line-height:1;margin-bottom:8px">01</div>
+            <div class="srv-big-icon" style="width:64px;height:64px;background:var(--sakura-pale);border-radius:16px;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-size:2rem">🖥️</div>
             <h2 style="font-family:var(--serif);font-size:1.2rem;font-weight:500;line-height:1.5;margin-bottom:14px">情報システム・<br>Webサイト運用</h2>
-            <div style="background:var(--cream);border-radius:var(--rs);padding:14px 16px;font-size:.8rem;color:var(--ink-mid);border-left:3px solid var(--sakura);text-align:left"><strong style="display:block;font-size:.72rem;text-transform:uppercase;letter-spacing:.1em;color:var(--ink);margin-bottom:6px">こんな方へ</strong>IT環境の選択肢が多くて困っている、運用の手間を減らしたい方。</div>
+            <div class="srv-target" style="background:var(--cream);border-radius:var(--rs);padding:14px 16px;font-size:.8rem;color:var(--ink-mid);border-left:3px solid var(--sakura);text-align:left"><strong style="display:block;font-size:.72rem;text-transform:uppercase;letter-spacing:.1em;color:var(--ink);margin-bottom:6px">こんな方へ</strong>IT環境の選択肢が多くて困っている、運用の手間を減らしたい方。</div>
           </div>
           <div>
             <div style="display:flex;flex-direction:column;gap:14px;margin-bottom:28px">
@@ -658,12 +665,12 @@ button{cursor:pointer;background:none;border:none;font-family:inherit}
           </div>
         </div>
 
-        <div style="display:grid;grid-template-columns:200px 1fr;gap:56px;align-items:start;margin-bottom:80px;padding-top:60px;border-top:1px solid var(--border)" class="rv">
-          <div style="position:sticky;top:84px;text-align:center">
-            <div style="font-family:var(--serif);font-size:3rem;color:var(--border);line-height:1;margin-bottom:8px">02</div>
-            <div style="width:64px;height:64px;background:var(--sakura-pale);border-radius:16px;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-size:2rem">🎙️</div>
+        <div class="srv-detail rv" style="margin-bottom:80px;padding-top:60px;border-top:1px solid var(--border)">
+          <div class="srv-detail-side">
+            <div class="srv-num" style="font-family:var(--serif);font-size:3rem;color:var(--border);line-height:1;margin-bottom:8px">02</div>
+            <div class="srv-big-icon" style="width:64px;height:64px;background:var(--sakura-pale);border-radius:16px;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-size:2rem">🎙️</div>
             <h2 style="font-family:var(--serif);font-size:1.2rem;font-weight:500;line-height:1.5;margin-bottom:14px">クリエイティブ制作・<br>広報支援</h2>
-            <div style="background:var(--cream);border-radius:var(--rs);padding:14px 16px;font-size:.8rem;color:var(--ink-mid);border-left:3px solid var(--sakura);text-align:left"><strong style="display:block;font-size:.72rem;text-transform:uppercase;letter-spacing:.1em;color:var(--ink);margin-bottom:6px">こんな方へ</strong>クリエイターや表現者、何かを「伝えたい」方。</div>
+            <div class="srv-target" style="background:var(--cream);border-radius:var(--rs);padding:14px 16px;font-size:.8rem;color:var(--ink-mid);border-left:3px solid var(--sakura);text-align:left"><strong style="display:block;font-size:.72rem;text-transform:uppercase;letter-spacing:.1em;color:var(--ink);margin-bottom:6px">こんな方へ</strong>クリエイターや表現者、何かを「伝えたい」方。</div>
           </div>
           <div>
             <div style="display:flex;flex-direction:column;gap:14px;margin-bottom:28px">
@@ -675,12 +682,12 @@ button{cursor:pointer;background:none;border:none;font-family:inherit}
           </div>
         </div>
 
-        <div style="display:grid;grid-template-columns:200px 1fr;gap:56px;align-items:start;padding-top:60px;border-top:1px solid var(--border)" class="rv">
-          <div style="position:sticky;top:84px;text-align:center">
-            <div style="font-family:var(--serif);font-size:3rem;color:var(--border);line-height:1;margin-bottom:8px">03</div>
-            <div style="width:64px;height:64px;background:var(--sakura-pale);border-radius:16px;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-size:2rem">🌿</div>
+        <div class="srv-detail rv" style="padding-top:60px;border-top:1px solid var(--border)">
+          <div class="srv-detail-side">
+            <div class="srv-num" style="font-family:var(--serif);font-size:3rem;color:var(--border);line-height:1;margin-bottom:8px">03</div>
+            <div class="srv-big-icon" style="width:64px;height:64px;background:var(--sakura-pale);border-radius:16px;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-size:2rem">🌿</div>
             <h2 style="font-family:var(--serif);font-size:1.2rem;font-weight:500;line-height:1.5;margin-bottom:14px">対話と共感の<br>サポート</h2>
-            <div style="background:var(--cream);border-radius:var(--rs);padding:14px 16px;font-size:.8rem;color:var(--ink-mid);border-left:3px solid var(--sakura);text-align:left"><strong style="display:block;font-size:.72rem;text-transform:uppercase;letter-spacing:.1em;color:var(--ink);margin-bottom:6px">こんな方へ</strong>日々の悩み、キャリア、人間関係にモヤモヤしている方。</div>
+            <div class="srv-target" style="background:var(--cream);border-radius:var(--rs);padding:14px 16px;font-size:.8rem;color:var(--ink-mid);border-left:3px solid var(--sakura);text-align:left"><strong style="display:block;font-size:.72rem;text-transform:uppercase;letter-spacing:.1em;color:var(--ink);margin-bottom:6px">こんな方へ</strong>日々の悩み、キャリア、人間関係にモヤモヤしている方。</div>
           </div>
           <div>
             <div style="display:flex;flex-direction:column;gap:14px;margin-bottom:28px">
